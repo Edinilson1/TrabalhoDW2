@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas: 
+    "sidebar tittle tittle tittle tittle",
+    "sidebar pageviews monthlyusers newsignups subscriptions",
+    "sidebar revenue revenue revenue revenue",
+    "sidebar revenue revenue revenue revenue",
+    "sidebar revenue revenue revenue revenue",
+    "sidebar overview overview overview",
+    "sidebar ubd ubd recentorders recentorders",
+    "sidebar ubd ubd recentorders recentorders",
+    "sidebar ubc ubc ubc ubc";
+}
+
+.sidebar {
+    border: 1px black;
+    grid-area: sidebar;
+}
+
+.tittle {
+    border: 1px black;
+    grid-area: tittle;
+}
+
+.pageviews {
+    border: 1px black;
+    grid-area: pageviews;
+}
+
+.monthlyusers {
+    border: 1px black;
+    grid-area: monthlyusers;
+}
+
+.newsignups {
+    border: 1px black;
+    grid-area: newsignups;
+}
+
+.subscriptions {
+    border: 1px black;
+    grid-area: subscriptions;
+}
+
+.revenue {
+    border: 1px black;
+    grid-area: revenue;
+}
+
+.overview {
+    border: 1px black;
+    grid-area: overview;
+}
+
+.ubd {
+    border: 1px black;
+    grid-area: ubd;
+}
+
+.recentorders {
+    border: 1px black;
+    grid-area: recentorders;
+}
+
+.ubc {
+    border: 1px black;
+    grid-area: ubc;
+}
