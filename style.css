@@ -6,78 +6,169 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 
 .container {
+    margin-left: 20%;
     display: grid;
-    width: 100vw;
-    height: 100vh;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(9, 1fr);
+    width: calc(80vw - 10px);
+    height: 250vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1.3fr 7fr 1.5fr 5fr 4.5fr;
     grid-template-areas: 
-    "sidebar tittle tittle tittle tittle",
-    "sidebar pageviews monthlyusers newsignups subscriptions",
-    "sidebar revenue revenue revenue revenue",
-    "sidebar revenue revenue revenue revenue",
-    "sidebar revenue revenue revenue revenue",
-    "sidebar overview overview overview",
-    "sidebar ubd ubd recentorders recentorders",
-    "sidebar ubd ubd recentorders recentorders",
-    "sidebar ubc ubc ubc ubc";
+    "title title title title"
+    "pageviews monthlyusers newsignups subscriptions"
+    "revenue revenue revenue revenue"
+    "overview overview overview overview"
+    "ubd ubd recentorders recentorders"
+    "ubc ubc ubc ubc";
+    gap: 10px;
+    padding: 10px;
 }
 
 .sidebar {
-    border: 1px black;
-    grid-area: sidebar;
+    border: 1px solid black;
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
-.tittle {
-    border: 1px black;
-    grid-area: tittle;
+.title {
+    border: 1px solid black;
+    grid-area: title;
 }
 
 .pageviews {
-    border: 1px black;
+    border: 1px solid black;
     grid-area: pageviews;
 }
 
 .monthlyusers {
-    border: 1px black;
+    border: 1px solid black;
     grid-area: monthlyusers;
 }
 
 .newsignups {
-    border: 1px black;
+    border: 1px solid black;
     grid-area: newsignups;
 }
 
 .subscriptions {
-    border: 1px black;
+    border: 1px solid black;
     grid-area: subscriptions;
 }
 
 .revenue {
-    border: 1px black;
+    border: 1px solid black;
     grid-area: revenue;
 }
 
 .overview {
-    border: 1px black;
+    border: 1px solid black;
     grid-area: overview;
 }
 
 .ubd {
-    border: 1px black;
+    border: 1px solid black;
     grid-area: ubd;
 }
 
 .recentorders {
-    border: 1px black;
+    border: 1px solid black;
     grid-area: recentorders;
 }
 
 .ubc {
-    border: 1px black;
+    border: 1px solid black;
     grid-area: ubc;
+}
+
+.extensivel {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: calc(100%-10px);
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+.extensivel-header {
+    display: flex;
+    flex-direction: row;
+  padding: 10px;
+  background-color: #acacac;
+  cursor: pointer;
+}
+
+.extensivel-content {
+  max-height: 0;
+  background-color: #acacac;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 10px;
+}
+
+.extensivel-header p {
+  padding-left: 10px;
+  padding-top: 2.5px;
+}
+
+.lista {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.lista:hover {
+    background-color: #919191;
+}
+
+.lista p {
+    padding-left: 10px;
+}
+
+.linha {
+    width: 100%;
+    border: 1px solid rgb(53, 53, 53);
+}
+
+.conta {
+    display: flex;
+    border-radius: 6px;
+    width: calc(100%-10px);
+    padding: 10px;
+    background-color: #acacac;
+    border-radius: 6px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.nome {
+    font-size: 20px;
+    
+}
+
+.letra {
+padding-left: 10px;
+}
+
+.letra p {
+    padding-top: 3px;
+    font-size: 12px;
+}
+
+.imagem {
+    background-image: url("./assets/vitor.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    width: 3.3vw;
+    height: 7vh;
 }
