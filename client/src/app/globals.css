@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: #1e1e1e;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  border: 1px solid #2c2c2c;
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  overflow-y: auto;
+  background-color: #2a2a2a;
+  padding: 10px;
+}
+
+.extensivel {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.extensivel-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  background-color: #acacac;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.extensivel-header:hover {
+  background-color: #9a9a9a;
+}
+
+.extensivel-header p {
+  padding-left: 10px;
+}
+
+.lista {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.lista:hover {
+  background-color: #919191;
+}
+
+.lista p {
+  padding-left: 10px;
+}
+
+.linha {
+  width: 100%;
+  border: 1px solid rgb(53, 53, 53);
+  margin: 15px 0;
+}
+
+.conta {
+  display: flex;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: #acacac;
+  cursor: pointer;
+}
+
+.nome {
+  font-size: 18px;
+}
+
+.letra {
+  padding-left: 10px;
+}
+
+.letra p {
+  font-size: 12px;
+}
+
+.imagem {
+  background-image: url("/vitor.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+#main-content {
+  margin-left: 20%;
+  width: 80%;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  width: calc(80vw - 10px);
+  height: 250vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1.3fr 7fr 1.5fr 5fr 4.5fr;
+  grid-template-areas:
+    "title title title title"
+    "pageviews monthlyusers newsignups subscriptions"
+    "revenue revenue revenue revenue"
+    "overview overview overview overview"
+    "ubd ubd recentorders recentorders"
+    "ubc ubc ubc ubc";
+  gap: 10px;
+  padding: 10px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.title {
+  border: 1px solid black;
+  grid-area: title;
+}
+
+.pageviews {
+  border: 1px solid black;
+  grid-area: pageviews;
+}
+
+.monthlyusers {
+  border: 1px solid black;
+  grid-area: monthlyusers;
+}
+
+.newsignups {
+  border: 1px solid black;
+  grid-area: newsignups;
+}
+
+.subscriptions {
+  border: 1px solid black;
+  grid-area: subscriptions;
+}
+
+.revenue {
+  border: 1px solid black;
+  grid-area: revenue;
+}
+
+.overview {
+  border: 1px solid black;
+  grid-area: overview;
+}
+
+.ubd {
+  border: 1px solid black;
+  grid-area: ubd;
+}
+
+.recentorders {
+  border: 1px solid black;
+  grid-area: recentorders;
+}
+
+.ubc {
+  border: 1px solid black;
+  grid-area: ubc;
+}
+
+.extensivel-content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #acacac;
+  padding: 0 10px;
+  pointer-events: none;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.extensivel-content.open {
+  max-height: 2000px;
+  pointer-events: auto;
+  padding: 10px;
+}
