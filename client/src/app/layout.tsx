@@ -24,7 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head><link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'/></head>
+      <head>
+        <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'/>
+        <script src="https://unpkg.com/react@18/umd/react.production.min.js" defer></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" defer></script>
+        <script src="https://unpkg.com/recharts/umd/Recharts.js" defer></script>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>

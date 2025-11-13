@@ -23,7 +23,6 @@ body {
 }
 
 .extensivel {
-  border: 1px solid #ccc;
   border-radius: 6px;
   margin: 10px 0;
   overflow: hidden;
@@ -34,9 +33,9 @@ body {
   flex-direction: row;
   align-items: center;
   padding: 10px;
-  background-color: #acacac;
   cursor: pointer;
   transition: background 0.2s ease;
+  background-color: #353535;
 }
 
 .extensivel-header:hover {
@@ -75,7 +74,6 @@ body {
   display: flex;
   border-radius: 6px;
   padding: 10px;
-  background-color: #acacac;
   cursor: pointer;
 }
 
@@ -110,16 +108,15 @@ body {
 .container {
   display: grid;
   width: calc(80vw - 10px);
-  height: 250vh;
+  height: 200vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1.3fr 7fr 1.5fr 5fr 4.5fr;
+  grid-template-rows: 1fr 1.3fr 7fr 1fr 3fr;
   grid-template-areas:
     "title title title title"
     "pageviews monthlyusers newsignups subscriptions"
     "revenue revenue revenue revenue"
     "overview overview overview overview"
-    "ubd ubd recentorders recentorders"
-    "ubc ubc ubc ubc";
+    "ubd ubd ubc ubc";
   gap: 10px;
   padding: 10px;
 }
@@ -129,66 +126,190 @@ body {
 }
 
 .title {
-  border: 1px solid black;
   grid-area: title;
 }
 
 .pageviews {
-  border: 1px solid black;
+  border: 1px solid rgb(109, 109, 109);
   grid-area: pageviews;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #292929;
 }
 
 .monthlyusers {
-  border: 1px solid black;
+  border: 1px solid rgb(109, 109, 109);
   grid-area: monthlyusers;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #292929;
 }
 
 .newsignups {
-  border: 1px solid black;
+  border: 1px solid rgb(109, 109, 109);
   grid-area: newsignups;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #292929;
 }
 
 .subscriptions {
-  border: 1px solid black;
+  border: 1px solid rgb(109, 109, 109);
   grid-area: subscriptions;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #292929;
 }
 
 .revenue {
-  border: 1px solid black;
+  border: 1px solid rgb(109, 109, 109);
   grid-area: revenue;
+  background-color: #292929;
+  border-radius: 15px;
+  padding: 30px;
 }
 
 .overview {
-  border: 1px solid black;
   grid-area: overview;
+  display: flex;
+  align-items: center;
 }
 
 .ubd {
-  border: 1px solid black;
   grid-area: ubd;
-}
-
-.recentorders {
-  border: 1px solid black;
-  grid-area: recentorders;
+  border: 1px solid rgb(109, 109, 109);
+  background-color: #292929;
+  border-radius: 15px;
+  padding: 30px;
 }
 
 .ubc {
-  border: 1px solid black;
   grid-area: ubc;
+  border: 1px solid rgb(109, 109, 109);
+  background-color: #292929;
+  border-radius: 15px;
+  padding: 30px;
 }
 
 .extensivel-content {
   max-height: 0;
   overflow: hidden;
-  background-color: #acacac;
   padding: 0 10px;
   pointer-events: none;
   transition: max-height 0.5s ease-in-out;
+  background-color: #353535;
 }
 
 .extensivel-content.open {
   max-height: 2000px;
   pointer-events: auto;
   padding: 10px;
+}
+
+.selected {
+  background-color: #4a4a4a;
+}
+
+.nome1 {
+  font-weight: bold;
+  font-size: 25px;
+  padding-bottom: 7px;
+}
+
+.subtitulo {
+  color: #a0a0a0;
+}
+
+.titulo1 {
+  color: #a0a0a0;
+  font-size: 18px;
+}
+
+.bxr {
+  position: relative;
+  top: 3px;
+  font-size: 20px;
+}
+
+.destaque {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.revenue .titulo1 {
+  padding-bottom: 10px;
+}
+
+input {
+  width: 15%;
+  height: 25%;
+  background-color: #4a4a4a;
+  border: 1px solid #292929;
+  border-radius: 5px;
+}
+
+.paises {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 30px;
+}
+
+.pais {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #4a4a4a;
+  padding-top: 10px;
+}
+
+.pais1 {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.pais2 {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.pais3 {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.pais4 {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  
+  .container {
+    width: 100vw
+  }
+
+  #main-content {
+  margin-left: 0;
+  width: 100vw;
+}
 }
