@@ -12,7 +12,7 @@ interface ExtensivelProps {
     items: ExtensivelItem[];
     defaultOpen?: boolean;
     onSelectItem: (content: React.ReactNode) => void;
-    selectedIndex?: number; // Adicione
+    selectedIndex?: number;
 }
 
 export default function Extensivel({ title, icon, items, defaultOpen = false, onSelectItem, selectedIndex = 0 }: ExtensivelProps) {
